@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatars"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        tools:src="@tools:sample/avatars"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/sf_compact_semibold"
+        tools:text="@tools:sample/full_names"
+        app:layout_constraintStart_toEndOf="@id/avatars"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:fontFamily="@font/sf_compact_regular"
+        tools:text="company"
+        app:layout_constraintStart_toEndOf="@id/avatars"
+        app:layout_constraintTop_toBottomOf="@id/username"/>
+
+    <ImageView
+        android:id="@+id/follower_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintStart_toEndOf="@id/avatars"
+        app:layout_constraintTop_toBottomOf="@id/company"/>
+
+    <TextView
+        android:id="@+id/follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/sf_compact_regular"
+        tools:text="follower"
+        app:layout_constraintStart_toEndOf="@id/follower_ic"
+        app:layout_constraintTop_toBottomOf="@id/company"/>
+
+    <ImageView
+        android:id="@+id/following_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_baseline_person_add_alt_1_24"
+        app:layout_constraintStart_toEndOf="@id/follower"
+        app:layout_constraintTop_toBottomOf="@id/company"/>
+
+    <TextView
+        android:id="@+id/following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/sf_compact_regular"
+        tools:text="following"
+        app:layout_constraintStart_toEndOf="@id/following_ic"
+        app:layout_constraintTop_toBottomOf="@id/company"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
